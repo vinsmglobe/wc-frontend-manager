@@ -33,8 +33,8 @@ foreach( $count_products as $count_product ) {
 <div class="collapse wcfm-collapse" id="wcfm_products_listing">
 	
 	<div class="wcfm-page-headig">
-		<span class="wcfmfa fa-cube"></span>
-		<span class="wcfm-page-heading-text"><?php _e( 'Products', 'wc-frontend-manager' ); ?></span>
+		<span class="wcfmfa fa-users"></span>
+		<span class="wcfm-page-heading-text"><?php _e( 'Profiles', 'wc-frontend-manager' ); ?></span>
 		<?php do_action( 'wcfm_page_heading' ); ?>
 	</div>
 	<div class="wcfm-collapse-content">
@@ -222,7 +222,7 @@ foreach( $count_products as $count_product ) {
 							<th><?php _e( 'Status', 'wc-frontend-manager' ); ?></th>
 							<th><?php _e( 'Stock', 'wc-frontend-manager' ); ?></th>
 							<th><?php _e( 'Price', 'wc-frontend-manager' ); ?></th>
-							<th><?php _e( 'Taxonomies', 'wc-frontend-manager' ); ?></th>
+							<th><?php _e( 'Categories', 'wc-frontend-manager' ); ?></th>
 							<th><span class="wcfmfa fa-cubes text_tip" data-tip="<?php _e( 'Type', 'wc-frontend-manager' ); ?>"></span></th>
 							<th><span class="wcfmfa fa-eye text_tip" data-tip="<?php _e( 'Views', 'wc-frontend-manager' ); ?>"></span></th>
 							<th><?php _e( 'Date', 'wc-frontend-manager' ); ?></th>
@@ -246,7 +246,7 @@ foreach( $count_products as $count_product ) {
 							<th><?php _e( 'Status', 'wc-frontend-manager' ); ?></th>
 							<th><?php _e( 'Stock', 'wc-frontend-manager' ); ?></th>
 							<th><?php _e( 'Price', 'wc-frontend-manager' ); ?></th>
-							<th><?php _e( 'Taxonomies', 'wc-frontend-manager' ); ?></th>
+							<th><?php _e( 'Categories', 'wc-frontend-manager' ); ?></th>
 							<th><span class="wcfmfa fa-cubes text_tip" data-tip="<?php _e( 'Type', 'wc-frontend-manager' ); ?>"></span></th>
 							<th><span class="wcfmfa fa-eye text_tip" data-tip="<?php _e( 'Views', 'wc-frontend-manager' ); ?>"></span></th>
 							<th><?php _e( 'Date', 'wc-frontend-manager' ); ?></th>

@@ -404,8 +404,8 @@ if( count( $product_types ) == 0 ) {
 
 <div class="collapse wcfm-collapse" id="wcfm_products_manage">
   <div class="wcfm-page-headig">
-		<span class="wcfmfa fa-cube"></span>
-		<span class="wcfm-page-heading-text"><?php _e( 'Manage Product', 'wc-frontend-manager' ); ?></span>
+		<span class="wcfmfa fa-user"></span>
+		<span class="wcfm-page-heading-text"><?php _e( 'Manage Profile', 'wc-frontend-manager' ); ?></span>
 		<?php do_action( 'wcfm_page_heading' ); ?>
 	</div>
 	<div class="wcfm-collapse-content">
@@ -414,7 +414,7 @@ if( count( $product_types ) == 0 ) {
 		
 		<div class="wcfm-container wcfm-top-element-container">
 			<?php do_action( 'before_wcfm_products_manage_title' ); ?>
-			<h2><?php if( $product_id ) { _e('Edit Product', 'wc-frontend-manager' ); } else { _e('Add Product', 'wc-frontend-manager' ); } ?></h2>
+			<h2><?php if( $product_id ) { _e('Edit Profile', 'wc-frontend-manager' ); } else { _e('Add Product', 'wc-frontend-manager' ); } ?></h2>
 			<?php do_action( 'after_wcfm_products_manage_title' ); ?>
 			
 			<?php
