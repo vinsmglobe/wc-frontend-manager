@@ -126,19 +126,19 @@ global $wp, $WCFM, $wc_product_attributes;
 				
 				<?php if( apply_filters( 'wcfm_is_allow_attribute', true ) && apply_filters( 'wcfm_is_allow_pm_attribute', true ) ) { ?>
 				<!-- collapsible 6 -->
-				<div class="page_collapsible products_manage_attribute <?php echo apply_filters( 'wcfm_pm_block_class_attributes', 'simple variable external grouped booking' ); ?> <?php echo apply_filters( 'wcfm_pm_block_custom_class_attributes', '' ); ?>" id="wcfm_products_manage_form_attribute_head"><label class="wcfmfa fa-server"></label><?php _e('Attributes', 'wc-frontend-manager'); ?><span></span></div>
+				<div class="page_collapsible products_manage_attribute <?php echo apply_filters( 'wcfm_pm_block_class_attributes', 'simple variable external grouped booking' ); ?> <?php echo apply_filters( 'wcfm_pm_block_custom_class_attributes', '' ); ?>" id="wcfm_products_manage_form_attribute_head"><label class="wcfmfa fa-server"></label><?php _e('Your Details', 'wc-frontend-manager'); ?><span></span></div>
 				<div class="wcfm-container simple variable external grouped booking <?php echo apply_filters( 'wcfm_pm_block_custom_class_attributes', '' ); ?>">
 					<div id="wcfm_products_manage_form_attribute_expander" class="wcfm-content">
 						<?php
 						  do_action( 'wcfm_products_manage_attributes', $product_id );
 						  
 							$WCFM->wcfm_fields->wcfm_generate_form_field( apply_filters( 'product_simple_fields_attributes', array(  
-																																															"attributes" => array( 'label' => __( 'Attributes', 'wc-frontend-manager' ), 'type' => 'multiinput', 'class' => 'wcfm-text wcfm_ele simple variable external grouped booking', 'has_dummy' => true, 'label_class' => 'wcfm_title', 'value' => $attributes, 'options' => array(
+																																															"attributes" => array( 'label' => __( 'Your Details', 'wc-frontend-manager' ), 'type' => 'multiinput', 'class' => 'wcfm-text wcfm_ele simple variable external grouped booking', 'has_dummy' => true, 'label_class' => 'wcfm_title', 'value' => $attributes, 'options' => array(
 																																																	"term_name" => array('type' => 'hidden'),
 																																																	"is_active" => array('label' => __('Active?', 'wc-frontend-manager'), 'type' => 'checkbox', 'value' => 'enable', 'class' => 'wcfm-checkbox wcfm_ele attribute_ele simple variable external grouped booking', 'label_class' => 'wcfm_title attribute_ele checkbox_title'),
 																																																	"name" => array('label' => __('Name', 'wc-frontend-manager'), 'type' => 'text', 'class' => 'wcfm-text wcfm_ele attribute_ele simple variable external grouped booking', 'label_class' => 'wcfm_title attribute_ele'),
 																																																	"value" => array('label' => __('Value(s):', 'wc-frontend-manager'), 'type' => 'textarea', 'class' => 'wcfm-textarea wcfm_ele simple variable external grouped booking', 'placeholder' => sprintf( __('Enter some text, some attributes by "%s" separating values.', 'wc-frontend-manager'), WC_DELIMITER ), 'label_class' => 'wcfm_title'),
-																																																	"is_visible" => array('label' => __('Visible on the product page', 'wc-frontend-manager'), 'type' => 'checkbox', 'value' => 'enable', 'class' => 'wcfm-checkbox wcfm_ele simple variable external grouped booking', 'label_class' => 'wcfm_title checkbox_title'),
+																																																	"is_visible" => array('label' => __('Visible on the product page', 'wc-frontend-manager'), 'type' => 'checkbox', 'value' => 'enable', 'class' => 'wcfm-checkbox wcfm_ele simple variable external grouped booking', 'label_class' => 'wcfm_title 	checkbox_title'),
 																																																	"is_variation" => array('label' => __('Use as Variation', 'wc-frontend-manager'), 'type' => 'checkbox', 'value' => 'enable', 'class' => 'wcfm-checkbox wcfm_ele variable variable-subscription', 'label_class' => 'wcfm_title checkbox_title wcfm_ele variable variable-subscription'),
 																																																	"tax_name" => array('type' => 'hidden'),
 																																																	"is_taxonomy" => array('type' => 'hidden')

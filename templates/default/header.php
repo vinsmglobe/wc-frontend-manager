@@ -21,9 +21,11 @@ if( !apply_filters( 'wcfm_is_allow_template_header', true ) ) return;
 			$blog_title = get_bloginfo( 'name' );
 			$blog_link  = get_bloginfo( 'url' );
 			?>
+		<!--
 			<div class="wcfm-site-name">
-				<a href="<?php echo $blog_link; ?>"><?php echo $blog_title; ?></a>
+				<a href="<?php //echo $blog_link; ?>"><?php //echo $blog_title; ?></a>
 			</div>
+-->
 		</div>
 	</div>
 </div>
