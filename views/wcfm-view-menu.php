@@ -89,14 +89,14 @@ $toggle_state = get_user_meta( $user_id, '_wcfm_menu_toggle_state', true );
 <div id="wcfm_menu" <?php if( $toggle_state && ( $toggle_state == 'yes' ) ) { echo 'class="wcfm_menu_toggle"'; } ?>>
 
   <?php if( apply_filters( 'wcfm_is_pref_dashboard_logo', true ) ) { ?>
-		<div class="wcfm_menu_logo"> 
+		<div class="wcfm_menu_logo">
 			<h4>
 			  <?php echo $store_logo; ?>
 			  <?php _e( $store_name );?>
 			</h4>
 		</div>
 	<?php } else { ?>
-		<div class="wcfm_menu_no_logo"> 
+		<div class="wcfm_menu_no_logo">
 			<h4><?php _e( $store_name );?></h4>
 		</div>
 	<?php } ?>
@@ -109,15 +109,15 @@ $toggle_state = get_user_meta( $user_id, '_wcfm_menu_toggle_state', true );
 			</a>
 		</div>
 	<?php } ?>
-  
-  <?php 
+
+  <?php
   if( !empty($wcfm_formeted_menus) ) {
   	foreach( $wcfm_formeted_menus as $wcfm_menu_key => $wcfm_menu_data ) {
   		$wcfm_menu_for = 'both';
 			if( isset( $wcfm_menu_data['menu_for'] ) ) $wcfm_menu_for = $wcfm_menu_data['menu_for'];
 			if( ( $wcfm_menu_for == 'admin' ) && wcfm_is_vendor() ) continue;
 			if( ( $wcfm_menu_for == 'vendor' ) && !wcfm_is_vendor() ) continue;
-			
+
   		if( !empty( $wcfm_menu_data['label'] ) && !empty( $wcfm_menu_data['url'] ) ) {
 				if( !isset( $wcfm_menu_data['capability'] ) || empty( $wcfm_menu_data['capability'] ) || apply_filters( $wcfm_menu_data['capability'], true ) ) {
 					$is_active = false;
@@ -128,7 +128,7 @@ $toggle_state = get_user_meta( $user_id, '_wcfm_menu_toggle_state', true );
 						<a class="wcfm_menu_item <?php if( $is_active ) echo 'active'; ?>" href="<?php echo $wcfm_menu_data['url']; ?>" <?php if( isset( $wcfm_menu_data['new_tab'] ) && ( $wcfm_menu_data['new_tab'] == 'yes' ) ) echo 'target="_blank"'; ?>>
 							<span class="wcfmfa fa-<?php echo str_replace( 'fa-', '', $wcfm_menu_data['icon'] ); ?>"></span>
 							<span class="text">
-							  <?php 
+							  <?php
 							  $wcfm_menu_lable_length = (int) apply_filters( 'wcfm_is_allow_menu_lable_length', 25 );
 							  if( strlen( $wcfm_menu_data['label'] ) > $wcfm_menu_lable_length ) {
 							  	echo substr( $wcfm_menu_data['label'], 0, $wcfm_menu_lable_length ) . ' ..';
@@ -156,6 +156,12 @@ $toggle_state = get_user_meta( $user_id, '_wcfm_menu_toggle_state', true );
 		}
 	}
 	?>
+	<!-- <div class="wcfm_menu_items">
+		<a class="wcfm_menu_item" href="/dashboard/artist-subscriptions">
+			<span class="wcfmfa fa-user"></span>
+			<span class="text"><?php _e('Artist Subscriptions', 'wc-fronten-manager'); ?> </span>
+		</a>
+	</div> -->
 	<?php if( apply_filters( 'wcfm_is_allow_logout_in_menu', true ) ) { ?>
 		<div class="wcfm_menu_items wcfm_menu_logout">
 			<a class="wcfm_menu_item" href="<?php echo esc_url(wp_logout_url( apply_filters( 'wcfm_logout_url', get_wcfm_url() ) ) ); ?>">
