@@ -122,6 +122,54 @@ global $wp, $WCFM, $wc_product_attributes;
 				<?php } ?>
 				<?php } ?>
 				
+  <!-- Start Test -->
+        <?php do_action( 'after_wcfm_products_manage_tax', $product_id, $product_type ); ?>
+				
+				<?php if( apply_filters( 'wcfm_is_allow_attribute', true ) && apply_filters( 'wcfm_is_allow_pm_attribute', true ) ) { ?>
+				<!-- collapsible Test -->
+        <div class="page_collapsible products_manage_attribute <?php echo apply_filters( 'wcfm_pm_block_class_attributes', 'simple variable external grouped booking' ); ?> <?php echo apply_filters( 'wcfm_pm_block_custom_class_attributes', '' ); ?>" id="wcfm_products_manage_form_attribute_head"><label class="wcfmfa fa-server"></label><?php _e('Your Details', 'wc-frontend-manager'); ?><span></span></div>
+        <div class="wcfm-container simple variable external grouped booking <?php echo apply_filters( 'wcfm_pm_block_custom_class_attributes', '' ); ?>">
+          <div id="wcfm_products_manage_form_attribute_expander" class="wcfm-content">
+			  <h2 class= 'wcfm_text wcfm_ele simple variable external grouped booking'>Your Details</h2>
+			  <br>
+			  <strong><label class='wcfm-text wcfm_ele attribute_ele simple variable external grouped booking'>City</label></strong>
+			<?php 
+																																	 do_action('wcfm_products_manage_attributes', $product_id);
+																																	 array('label' => __('Active?', 'wc-frontend-manager'), 'type' => 'checkbox', 'value' => 'enable', 'class' => 'wcfm-checkbox wcfm_ele attribute_ele simple variable external grouped booking', 'label_class' => 'wcfm_title attribute_ele checkbox_title');
+																																	 ?>
+            <?php
+              do_action( 'wcfm_products_manage_attributes', $product_id );
+              
+              $WCFM->wcfm_fields->wcfm_generate_form_field( apply_filters( 'product_simple_fields_attributes', array(  
+                                                                                              "attributes" => array( 'label' => __( 'Your Details', 'wc-frontend-manager' ), 'type' => 'multiinput', 'class' => 'wcfm-text wcfm_ele simple variable external grouped booking', 'has_dummy' => true, 'label_class' => 'wcfm_title', 'value' => $attributes, 'options' => array(
+                                                                                                  "term_name" => array('type' => 'hidden'),
+                                                                                                  "is_active" => array('label' => __('Active?', 'wc-frontend-manager'), 'type' => 'checkbox', 'value' => 'enable', 'class' => 'wcfm-checkbox wcfm_ele attribute_ele simple variable external grouped booking', 'label_class' => 'wcfm_title attribute_ele checkbox_title'),
+                                                                                                  "name" => array('label' => __('Name', 'wc-frontend-manager'), 'type' => 'text', 'class' => 'wcfm-text wcfm_ele attribute_ele simple variable external grouped booking', 'label_class' => 'wcfm_title attribute_ele'),
+                                                                                                  "value" => array('label' => __('Value(s):', 'wc-frontend-manager'), 'type' => 'textarea', 'class' => 'wcfm-textarea wcfm_ele simple variable external grouped booking', 'placeholder' => sprintf( __('Enter some text, some attributes by "%s" separating values.', 'wc-frontend-manager'), WC_DELIMITER ), 'label_class' => 'wcfm_title'),
+                                                                                                  "is_visible" => array('label' => __('Visible on the product page', 'wc-frontend-manager'), 'type' => 'checkbox', 'value' => 'enable', 'class' => 'wcfm-checkbox wcfm_ele simple variable external grouped booking', 'label_class' => 'wcfm_title checkbox_title'),
+                                                                                                  "is_variation" => array('label' => __('Use as Variation', 'wc-frontend-manager'), 'type' => 'checkbox', 'value' => 'enable', 'class' => 'wcfm-checkbox wcfm_ele variable variable-subscription', 'label_class' => 'wcfm_title checkbox_title wcfm_ele variable variable-subscription'),
+                                                                                                  "tax_name" => array('type' => 'hidden'),
+                                                                                                  "is_taxonomy" => array('type' => 'hidden')
+                                                                                              ))
+                                                                                    )) );
+            ?>
+            <div class="wcfm_clearfix"></div><br />
+            <p>
+              <?php if( apply_filters( 'wcfm_is_allow_add_attribute', true ) ) { ?>
+                <select name="wcfm_attribute_taxonomy" class="wcfm-select wcfm_attribute_taxonomy">
+                  <option value="add_attribute"><?php _e( 'Add attribute', 'wc-frontend-manager' ); ?></option>
+                </select>
+                <button type="button" class="button wcfm_add_attribute"><?php _e( 'Add', 'wc-frontend-manager' ); ?></button>
+              <?php } ?>
+            </p>
+            <div class="wcfm_clearfix"></div><br />
+          </div>
+        </div>
+        <!-- end collapsible -->
+        <div class="wcfm_clearfix"></div>
+        <?php } ?>
+        <!-- End Test -->
+
 				<?php do_action( 'after_wcfm_products_manage_tax', $product_id, $product_type ); ?>
 				
 				<?php if( apply_filters( 'wcfm_is_allow_attribute', true ) && apply_filters( 'wcfm_is_allow_pm_attribute', true ) ) { ?>
@@ -138,7 +186,7 @@ global $wp, $WCFM, $wc_product_attributes;
 																																																	"is_active" => array('label' => __('Active?', 'wc-frontend-manager'), 'type' => 'checkbox', 'value' => 'enable', 'class' => 'wcfm-checkbox wcfm_ele attribute_ele simple variable external grouped booking', 'label_class' => 'wcfm_title attribute_ele checkbox_title'),
 																																																	"name" => array('label' => __('Name', 'wc-frontend-manager'), 'type' => 'text', 'class' => 'wcfm-text wcfm_ele attribute_ele simple variable external grouped booking', 'label_class' => 'wcfm_title attribute_ele'),
 																																																	"value" => array('label' => __('Value(s):', 'wc-frontend-manager'), 'type' => 'textarea', 'class' => 'wcfm-textarea wcfm_ele simple variable external grouped booking', 'placeholder' => sprintf( __('Enter some text, some attributes by "%s" separating values.', 'wc-frontend-manager'), WC_DELIMITER ), 'label_class' => 'wcfm_title'),
-																																																	"is_visible" => array('label' => __('Visible on the product page', 'wc-frontend-manager'), 'type' => 'checkbox', 'value' => 'enable', 'class' => 'wcfm-checkbox wcfm_ele simple variable external grouped booking', 'label_class' => 'wcfm_title 	checkbox_title'),
+																																																	"is_visible" => array('label' => __('Visible on the product page', 'wc-frontend-manager'), 'type' => 'checkbox', 'value' => 'enable', 'class' => 'wcfm-checkbox wcfm_ele simple variable external grouped booking', 'label_class' => 'wcfm_title checkbox_title'),
 																																																	"is_variation" => array('label' => __('Use as Variation', 'wc-frontend-manager'), 'type' => 'checkbox', 'value' => 'enable', 'class' => 'wcfm-checkbox wcfm_ele variable variable-subscription', 'label_class' => 'wcfm_title checkbox_title wcfm_ele variable variable-subscription'),
 																																																	"tax_name" => array('type' => 'hidden'),
 																																																	"is_taxonomy" => array('type' => 'hidden')
