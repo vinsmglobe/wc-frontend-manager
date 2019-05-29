@@ -360,8 +360,8 @@ div.wcfm-collapse-content h2 {
 
 #wcfm-main-contentainer .wcfm_menu_toggler, #wcfm-main-contentainer .wcfm_responsive_menu_toggler { 
 	float: left;
-	width: 20px;
-	color: #00B0F0 !important;
+	width: 35px;
+	color: #000 !important;
 	cursor: pointer;
 }
 #wcfm-main-contentainer .wcfm_responsive_menu_toggler { display: none; }

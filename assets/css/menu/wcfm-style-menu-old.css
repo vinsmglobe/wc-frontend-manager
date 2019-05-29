@@ -352,7 +352,7 @@ div.wcfm-collapse-content h2 {
 #wcfm-main-contentainer .wcfm_menu_toggler { 
 	float: left;
 	width: 35px;
-	color: #34d2e2 !important;
+	color: #000000 !important;
 	cursor: pointer;
 	padding-top: 11px;
 }
@@ -956,7 +956,7 @@ table.dataTable.row-border tbody th, table.dataTable.row-border tbody td, table.
 	
 	#wcfm_menu .wcfm_menu_items a.wcfm_menu_item {
 		height: 44px;
-		padding-top: 0px;
+		/* padding-top: 0px; */
 	}
 	
 	#wcfm_menu .wcfm_menu_items a.active::after {

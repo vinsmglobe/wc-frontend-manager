@@ -102,7 +102,7 @@
 	
 	#wcfm_menu .wcfm_menu_items a.wcfm_menu_item {
 		height: 50px;
-		padding-top: 0px;
+		/* padding-top: 0px; */
 	}
 	
 	#wcfm_menu .wcfm_menu_items a.active::after {
