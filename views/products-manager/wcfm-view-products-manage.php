@@ -428,7 +428,7 @@ if( count( $product_types ) == 0 ) {
 						?>
 						<span class="view_count"><span class="wcfmfa fa-eye text_tip" data-tip="<?php _e( 'Views', 'wc-frontend-manager' ); ?>"></span>
 						<?php
-						echo get_post_meta( $wcfm_products_single->ID, '_wcfm_product_views', true ) . '</span></a>';
+						echo get_post_meta( $wcfm_products_single->ID, '_wcfm_product_views', true ) . ' views </span></a>';
 					} else {
 						echo '<a target="_blank" href="' . apply_filters( 'wcfm_product_preview_url', get_permalink( $wcfm_products_single->ID ) ) . '">';
 						?>
