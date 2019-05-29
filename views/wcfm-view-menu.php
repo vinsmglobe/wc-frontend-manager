@@ -159,7 +159,7 @@ $toggle_state = get_user_meta( $user_id, '_wcfm_menu_toggle_state', true );
 	<!-- <div class="wcfm_menu_items">
 		<a class="wcfm_menu_item" href="/dashboard/artist-subscriptions">
 			<span class="wcfmfa fa-user"></span>
-			<span class="text"><?php _e('Artist Subscriptions', 'wc-fronten-manager'); ?> </span>
+			<span class="text"><?php //_e('Artist Subscriptions', 'wc-fronten-manager'); ?> </span>
 		</a>
 	</div> -->
 	<?php if( apply_filters( 'wcfm_is_allow_logout_in_menu', true ) ) { ?>
